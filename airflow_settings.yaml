@@ -1,0 +1,16 @@
+airflow:
+  connections:
+    - conn_id: postgres_default
+      conn_type: postgres
+      host: localhost
+      schema: postgres
+      login: postgres
+      password: postgres
+      port: 5432
+  variables:
+    - key: dbt_project_dir
+      value: /usr/local/airflow/dbt
+    - key: profiles_dir
+      value: /usr/local/airflow/include/dbt/profiles
+    - key: dbt_target
+      value: dev
